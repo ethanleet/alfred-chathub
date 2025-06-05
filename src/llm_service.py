@@ -105,7 +105,7 @@ class LLMService(ABC):
                 "behaviour": {"response": "replacelast"}
             })
 
-        append_chat(chat_file, {"role": "assistant", "content": response_text if response_text else error_message})
+        append_chat(chat_file, {"role": "assistant", "content": response_text or error_message or ""})
         delete_file(stream_file)
         delete_file(pid_stream_file)
 
