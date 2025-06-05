@@ -87,7 +87,7 @@ class LLMService(ABC):
             delete_file(pid_stream_file)
             return json.dumps({
                 "response": f"{response_text} [Connection Stalled]",
-                "footer": "You can ask ChatGPT to continue the answer",
+                "footer": "You can ask the assistant to continue the answer",
                 "behaviour": {"response": "replacelast", "scroll": "end"}
             })
 
